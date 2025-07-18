@@ -15,42 +15,16 @@ const EdgarBronfman = () => {
       </View>
       <View style={styles.header}>
         <Text style={styles.title}>Edgar Miles Bronfman Sr.</Text>
+        <Badge variant="secondary" style={styles.badge}>Businessman</Badge>
       </View>
 
       <View style={styles.section}>
         <Card style={styles.card}>
           <CardHeader>
-            <Text style={styles.cardTitle}>Personal Information</Text>
+            <Text style={styles.cardTitle}>Description</Text>
           </CardHeader>
           <CardContent>
-            <Text style={styles.infoText}>• Born 1929 in Montrèal, QC</Text>
-            <Text style={styles.infoText}>• Long-time New York, NY resident as Chairman of Seagram</Text>
-            <Text style={styles.infoText}>• Later split time between Manhattan and East Hampton</Text>
-            <Text style={styles.infoText}>• Business magnate and philanthropist</Text>
-          </CardContent>
-        </Card>
-
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Known Locations</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.locationText}>📍 Montrèal, QC (Birthplace)</Text>
-            <Text style={styles.locationText}>📍 New York, NY (Primary residence)</Text>
-            <Text style={styles.locationText}>📍 Manhattan, NY (Business headquarters)</Text>
-            <Text style={styles.locationText}>📍 East Hampton, NY (Second home)</Text>
-          </CardContent>
-        </Card>
-
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Background</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.infoText}>• Former Seagram's CEO and philanthropist</Text>
-            <Text style={styles.infoText}>• Chairman of Seagram Company with no criminal charges or convictions on record</Text>
-            <Text style={styles.infoText}>• Major figure in beverage industry</Text>
-            <Text style={styles.infoText}>• Died in 2013</Text>
+            <Text style={styles.infoText}>Mega Group/Study Group Pedophile</Text>
           </CardContent>
         </Card>
       </View>
@@ -69,9 +43,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   profileImage: {
-    width: 200,
-    height: 200,
-    borderRadius: 100,
+    width: 250,
+    height: 250,
+    borderRadius: 125,
     borderWidth: 3,
     borderColor: '#e0e0e0',
   },
@@ -115,10 +89,11 @@ const styles = StyleSheet.create({
     color: '#1a1a1a',
   },
   infoText: {
-    fontSize: 14,
+    fontSize: 24,
     color: '#666',
-    lineHeight: 20,
+    lineHeight: 32,
     marginBottom: 8,
+    fontWeight: 'bold',
   },
   locationText: {
     fontSize: 14,

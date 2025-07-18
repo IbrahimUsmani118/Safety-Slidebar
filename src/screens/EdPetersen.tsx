@@ -21,37 +21,10 @@ const EdPetersen = () => {
       <View style={styles.section}>
         <Card style={styles.card}>
           <CardHeader>
-            <Text style={styles.cardTitle}>Professional Information</Text>
+            <Text style={styles.cardTitle}>Description</Text>
           </CardHeader>
           <CardContent>
-            <Text style={styles.infoText}>• Retired FBI Special Agent</Text>
-            <Text style={styles.infoText}>• Best-known for supervising the 1975 kidnapping investigation of Exxon executive Sidney Reso</Text>
-            <Text style={styles.infoText}>• Hosted true-crime podcast recounting major FBI cases</Text>
-            <Text style={styles.infoText}>• Specialized in organized-crime and trafficking investigations</Text>
-          </CardContent>
-        </Card>
-
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Career Highlights</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.locationText}>📍 FBI Field Offices (Various locations)</Text>
-            <Text style={styles.locationText}>📍 Exxon kidnapping investigation (1975)</Text>
-            <Text style={styles.locationText}>📍 Organized-crime investigations</Text>
-            <Text style={styles.locationText}>📍 Human trafficking case reviews</Text>
-          </CardContent>
-        </Card>
-
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Career Summary</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.infoText}>• Distinguished FBI career spanning decades with no public record of any criminal charges</Text>
-            <Text style={styles.infoText}>• Led high-profile kidnapping and organized-crime investigations</Text>
-            <Text style={styles.infoText}>• Contributed to anti-trafficking efforts through case analysis</Text>
-            <Text style={styles.infoText}>• Specialized in complex criminal investigations and law enforcement training</Text>
+            <Text style={styles.infoText}>FBI Facilitator Pedophile</Text>
           </CardContent>
         </Card>
       </View>
@@ -70,9 +43,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   profileImage: {
-    width: 200,
-    height: 200,
-    borderRadius: 100,
+    width: 250,
+    height: 250,
+    borderRadius: 125,
     borderWidth: 3,
     borderColor: '#e0e0e0',
   },
@@ -116,10 +89,11 @@ const styles = StyleSheet.create({
     color: '#1a1a1a',
   },
   infoText: {
-    fontSize: 14,
+    fontSize: 24,
     color: '#666',
-    lineHeight: 20,
+    lineHeight: 32,
     marginBottom: 8,
+    fontWeight: 'bold',
   },
   locationText: {
     fontSize: 14,

@@ -5,15 +5,28 @@
  * If a screen doesn't take any params, set it to `undefined`.
  */
 export type RootStackParamList = {
-    Home: undefined;
-    "Jeffrey Epstein": undefined;
-    "Ghislaine Maxwell": undefined;
-    "Edgar Bronfman": undefined;
-    "John Tisch": undefined;
-    "James Hunt": undefined;
-    "Ed Petersen": undefined;
-    "Gauchos": undefined;
-    "Safety Info": undefined;
-    "Not Found": undefined;
-  };
+  Home: undefined;
+  JeffreyEpstein: undefined;
+  GhislaineMaxwell: undefined;
+  EdgarBronfman: undefined;
+  EdgarBronfmanJr: undefined;
+  MychalHarrison: undefined;
+  JohnTisch: undefined;
+  JessicaTisch: undefined;
+  JamesHunt: undefined;
+  EdPetersen: undefined;
+  LeslieWexner: undefined;
+  JamieDimon: undefined;
+  MaryJoWhite: undefined;
+  MichaelCLuethke: undefined;
+  SarahDamiani: undefined;
+  GaryGensler: undefined;
+  NormanOstrove: undefined;
+  ChristianCurry: undefined;
+  Gauchos: undefined;
+  SafetyInfo: undefined;
+  RiversideHawks: undefined;
+  TomKane: undefined;
+  NotFound: undefined;
+};
   

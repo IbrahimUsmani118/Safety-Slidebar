@@ -3,19 +3,19 @@ import { View, Text, ScrollView, StyleSheet, Image } from 'react-native';
 import { Card, CardContent, CardHeader } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 
-const GhislaineMaxwell = () => {
+const EdgarBronfmanJr = () => {
   return (
     <ScrollView style={styles.container}>
       <View style={styles.imageContainer}>
         <Image
-          source={{ uri: 'https://s.abcnews.com/images/US/Ghislaine-Maxwell-gty-ps-220725_1658759723191_hpMain_16x9_1600.jpg' }}
+          source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/9/9e/Edgar_Bronfman_Jr._%283016810069%29_%28cropped%29.jpg' }}
           style={styles.profileImage}
           resizeMode="cover"
         />
       </View>
       <View style={styles.header}>
-        <Text style={styles.title}>Ghislaine Noelle Marion Maxwell</Text>
-        <Badge variant="secondary" style={styles.badge}>Epstein Network</Badge>
+        <Text style={styles.title}>Edgar Bronfman Jr.</Text>
+        <Badge variant="secondary" style={styles.badge}>Businessman</Badge>
       </View>
 
       <View style={styles.section}>
@@ -24,7 +24,7 @@ const GhislaineMaxwell = () => {
             <Text style={styles.cardTitle}>Description</Text>
           </CardHeader>
           <CardContent>
-            <Text style={styles.infoText}>Sex Trafficker</Text>
+            <Text style={styles.infoText}>Mega Group/Study Group Pedophile</Text>
           </CardContent>
         </Card>
       </View>
@@ -43,9 +43,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   profileImage: {
-    width: 200,
-    height: 200,
-    borderRadius: 100,
+    width: 250,
+    height: 250,
+    borderRadius: 125,
     borderWidth: 3,
     borderColor: '#e0e0e0',
   },
@@ -95,12 +95,6 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     fontWeight: 'bold',
   },
-  locationText: {
-    fontSize: 14,
-    color: '#666',
-    lineHeight: 20,
-    marginBottom: 8,
-  },
 });
 
-export default GhislaineMaxwell; 
+export default EdgarBronfmanJr; 

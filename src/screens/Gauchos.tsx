@@ -33,55 +33,12 @@ const Gauchos = () => {
       </View>
 
       <View style={styles.section}>
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Youth Basketball Program</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.infoText}>• The Gauchos have changed the face of youth basketball in New York</Text>
-            <Text style={styles.infoText}>• Some 2,000 boys tried out, "dribbled and passed and shot their wads for a piece of the action"</Text>
-            <Text style={styles.infoText}>• Boys ages 4 to 19, almost all from minority communities of the Bronx and Manhattan</Text>
-            <Text style={styles.infoText}>• Hard little bodies whizzed in liquid motion toward the baskets</Text>
-          </CardContent>
-        </Card>
+        <Text style={styles.sectionTitle}>Description</Text>
+        <Text style={styles.text}>
+          Basketball Program
 
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Organization Details</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.infoText}>• Teamwork Foundation</Text>
-            <Text style={styles.infoText}>• Lou d'Almeida and related individuals</Text>
-            <Text style={styles.infoText}>• New York basketball team</Text>
-            <Text style={styles.infoText}>• Founded by Lou d'Almeida, a real-estate investor from Argentina</Text>
-          </CardContent>
-        </Card>
-
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Program Impact</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.infoText}>• Provides basketball opportunities for youth in New York</Text>
-            <Text style={styles.infoText}>• Offers trips to basketball camps and national tournaments</Text>
-            <Text style={styles.infoText}>• Locations in Orlando, FL, Chicago, and Las Vegas, NV</Text>
-            <Text style={styles.infoText}>• Young players can be seen by the right people at showcase events</Text>
-          </CardContent>
-        </Card>
-
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Related Article</Text>
-          </CardHeader>
-          <CardContent>
-            <TouchableOpacity onPress={handleArticlePress} style={styles.linkContainer}>
-              <Text style={styles.linkText}>
-                📰 Read: "Big Step in Basketball Toward a Bigger Dream" - New York Times (1991)
-              </Text>
-              <Text style={styles.linkSubtext}>Tap to open the original article about the Gauchos basketball program</Text>
-            </TouchableOpacity>
-          </CardContent>
-        </Card>
+          Pedophile Organization
+        </Text>
       </View>
     </ScrollView>
   );
@@ -98,9 +55,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   profileImage: {
-    width: 200,
-    height: 200,
-    borderRadius: 100,
+    width: 250,
+    height: 250,
+    borderRadius: 125,
     borderWidth: 3,
     borderColor: '#e0e0e0',
   },
@@ -166,6 +123,18 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#666',
     fontStyle: 'italic',
+  },
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 10,
+  },
+  text: {
+    fontSize: 24,
+    lineHeight: 32,
+    color: '#555',
+    fontWeight: 'bold',
   },
 });
 

@@ -19,42 +19,10 @@ const JamesStaley = () => {
       </View>
 
       <View style={styles.section}>
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Personal Information</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.infoText}>• Full name: James Edward Staley</Text>
-            <Text style={styles.infoText}>• Born in Boston, Massachusetts</Text>
-            <Text style={styles.infoText}>• Family later settled near Philadelphia, Pennsylvania</Text>
-            <Text style={styles.infoText}>• Former CEO of Barclays Bank</Text>
-          </CardContent>
-        </Card>
-
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Known Locations</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.locationText}>📍 Boston, Massachusetts (Birthplace)</Text>
-            <Text style={styles.locationText}>📍 Philadelphia, Pennsylvania (Family settlement)</Text>
-            <Text style={styles.locationText}>📍 New York City (34 years at J.P. Morgan)</Text>
-            <Text style={styles.locationText}>📍 London, England (Barclays CEO 2015)</Text>
-            <Text style={styles.locationText}>📍 Southampton, Long Island (Residence)</Text>
-          </CardContent>
-        </Card>
-
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Criminal History</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.infoText}>• British banker and former Barclays CEO</Text>
-            <Text style={styles.infoText}>• No criminal charges or convictions on record</Text>
-            <Text style={styles.infoText}>• Long-time associate of Epstein</Text>
-            <Text style={styles.infoText}>• Resigned from Barclays in 2021</Text>
-          </CardContent>
-        </Card>
+        <Text style={styles.sectionTitle}>Description</Text>
+        <Text style={styles.text}>
+          Banker
+        </Text>
       </View>
     </ScrollView>
   );
@@ -71,9 +39,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   profileImage: {
-    width: 200,
-    height: 200,
-    borderRadius: 100,
+    width: 250,
+    height: 250,
+    borderRadius: 125,
     borderWidth: 3,
     borderColor: '#e0e0e0',
   },
@@ -98,35 +66,17 @@ const styles = StyleSheet.create({
   section: {
     padding: 20,
   },
-  card: {
-    marginBottom: 16,
-    backgroundColor: '#fff',
-    borderRadius: 12,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: 3.84,
-    elevation: 5,
-  },
-  cardTitle: {
-    fontSize: 18,
-    fontWeight: '600',
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
     color: '#1a1a1a',
+    marginBottom: 10,
   },
-  infoText: {
-    fontSize: 14,
-    color: '#666',
-    lineHeight: 20,
-    marginBottom: 8,
-  },
-  locationText: {
-    fontSize: 14,
-    color: '#666',
-    lineHeight: 20,
-    marginBottom: 8,
+  text: {
+    fontSize: 24,
+    lineHeight: 32,
+    color: '#555',
+    fontWeight: 'bold',
   },
 });
 

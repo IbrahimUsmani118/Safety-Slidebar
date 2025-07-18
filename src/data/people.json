@@ -4,63 +4,108 @@
     {
       "name": "Jeffrey Edward Epstein",
       "fullName": "Jeffrey Edward Epstein",
-      "cities": [
-        "Manhattan, NY (Primary base of operations)",
-        "Palm Beach, FL (Residence and trafficking location)",
-        "Miami, FL (Townhouse location)"
-      ],
       "criminalHistory": "Convicted in Florida in 2008 of procuring a child for prostitution and soliciting prostitution; served 13 months under a controversial work-release arrangement. Arrested again in July 2019 on federal sex-trafficking charges involving dozens of underage girls, but died by suicide in custody before trial.",
       "category": "Epstein Network"
     },
     {
       "name": "Ghislaine Noelle Marion Maxwell",
       "fullName": "Ghislaine Noelle Marion Maxwell",
-      "cities": [
-        "New York City, NY (Madison Avenue apartment - trafficking hub)",
-        "Palm Beach, FL (Residence during Epstein's investigation)"
-      ],
       "criminalHistory": "In December 2021, convicted by a U.S. federal jury on five counts of sex trafficking and conspiracy for recruiting and grooming underage girls for Epstein; sentenced to 20 years in prison. Her appeal is now before the Supreme Court, with the DOJ urging against overturning her conviction.",
       "category": "Epstein Network"
     },
     {
       "name": "Edgar Miles Bronfman Sr.",
       "fullName": "Edgar Miles Bronfman Sr.",
-      "cities": [
-        "New York, NY (Seagram headquarters)",
-        "Manhattan, NY (Primary residence)"
-      ],
       "criminalHistory": "Chairman of Seagram Company. No criminal charges or convictions on record.",
       "category": "Epstein Network"
     },
     {
-      "name": "John Tisch",
-      "fullName": "John Tisch",
-      "cities": [
-        "New York, NY (Loews Hotels headquarters)",
-        "New York, NY (Co-owner of New York Giants NFL team)"
-      ],
-      "criminalHistory": "Not a suspect: No criminal allegations or proceedings. Human-trafficking connection: As a civic leader, he's been honored for philanthropy and anti-trafficking advocacy. Chairman of Loews Hotels and co-owner of the New York Giants.",
-      "category": "Civic Leader"
+      "name": "Leslie Wexner",
+      "fullName": "Leslie (Les) Wexner",
+      "criminalHistory": "American retail billionaire; founded what became L Brands (Victoria's Secret, Bath & Body Works) in the 1960s; later Chairman Emeritus; significant philanthropy via the Wexner Foundation. He previously had a business and personal association with Jeffrey Epstein that ended years before Epstein's 2019 arrest; Wexner has denied wrongdoing and has not been charged in Epstein's crimes. Public coverage largely concerns his former association with Epstein and philanthropy in leadership/education and the arts.",
+      "category": "Epstein Network"
     }
   ],
   "lawEnforcement": [
     {
       "name": "James Hunt",
       "fullName": "James Hunt",
-      "cities": [
-        "New York, NY (DEA New York Division)"
-      ],
       "criminalHistory": "Former Special Agent-in-Charge, DEA New York Division. Distinguished law enforcement career leading investigations that targeted trafficking as part of broader narcotics operations. Distinguished career with no public record of any criminal charges.",
       "category": "Law Enforcement"
     },
     {
       "name": "Ed Petersen",
       "fullName": "Ed Petersen",
-      "cities": [
-        "New York, NY (FBI New York Field Office)"
-      ],
       "criminalHistory": "Retired FBI Special Agent. Distinguished FBI career spanning decades, leading high-profile kidnapping and organized-crime investigations. Distinguished career with no public record of any criminal charges.",
       "category": "Law Enforcement"
+    }
+  ],
+  "businessLeaders": [
+    {
+      "name": "Jamie Dimon",
+      "fullName": "Jamie Dimon",
+      "criminalHistory": "Chairman & CEO of JPMorgan Chase (CEO since 2006; Chairman since end of 2006); long Wall Street career. JPMorgan's corporate compliance program states it conducts targeted anti–money laundering (AML) investigations to identify potential human trafficking networks. Separately, settlements related to the bank's past relationship with Jeffrey Epstein include earmarked funds (e.g., $25M for strengthening law enforcement against human trafficking as part of a broader $75M resolution with the U.S. Virgin Islands). These actions are remedial/compliance in context of litigation—not altruistic initiatives started by Dimon personally.",
+      "category": "Business Leader"
+    },
+    {
+      "name": "John Tisch",
+      "fullName": "John Tisch",
+      "criminalHistory": "Not a suspect: No criminal allegations or proceedings. Human-trafficking connection: As a civic leader, he's been honored for philanthropy and anti-trafficking advocacy. Chairman of Loews Hotels and co-owner of the New York Giants. Sources reflect broad civic and philanthropic engagement (education, community service, corporate citizenship) rather than specific anti-human trafficking programs.",
+      "category": "Business Leader"
+    },
+    {
+      "name": "Michael C. Luethke",
+      "fullName": "Michael C. Luethke",
+      "criminalHistory": "Strategic Advisor specializing in business strategy and investor relations. His role encompasses guiding technology startups towards peak operational efficiency and robust growth. No criminal charges or convictions on record.",
+      "category": "Business Leader"
+    }
+  ],
+  "publicFigures": [
+    {
+      "name": "Michelle Obama",
+      "fullName": "Michelle Obama",
+      "criminalHistory": "Former First Lady of the United States (2009–2017). During the Obama Administration there was a formal White House push against human trafficking (e.g., the April 9, 2013 White House Forum to Combat Human Trafficking). Michelle Obama's public focus areas were mainly childhood obesity, girls' education, military families and related empowerment messaging; available sources show her amplifying broad youth empowerment rather than leading specific anti-trafficking policy initiatives.",
+      "category": "Public Figure"
+    },
+    {
+      "name": "Alexandria Ocasio-Cortez",
+      "fullName": "Alexandria Ocasio-Cortez (AOC)",
+      "criminalHistory": "U.S. Representative (NY-14) since 2019; youngest woman ever elected to Congress at the time. Legislative and public safety materials show her focusing on broader community investment and criminal justice issues. She has criticized the 2018 FOSTA-SESTA law (intended to curb online sex trafficking) and called for its repeal, arguing it harms marginalized people and may impede effective anti-trafficking efforts—this is a policy critique, not operational participation in trafficking interdiction. No specific anti-trafficking bill sponsorship is evidenced in the provided sources.",
+      "category": "Public Figure"
+    }
+  ],
+  "legalProfessionals": [
+    {
+      "name": "Mary Jo White",
+      "fullName": "Mary Jo White",
+      "criminalHistory": "American attorney; Chair of the U.S. Securities and Exchange Commission (2013–2017); earlier U.S. Attorney for the Southern District of New York (1993–2002). As U.S. Attorney for SDNY (1993–2002) her office prosecuted a wide range of federal crimes (terrorism, securities fraud, drug trafficking, organized crime). Public biographical and case references emphasize those areas; there is no prominent, widely cited record of her personally spearheading human trafficking policy initiatives during that tenure (the era pre-dated later federal emphasis and statutory expansions on trafficking). Later conducted high-profile independent investigations for private entities.",
+      "category": "Legal Professional"
+    },
+    {
+      "name": "Sarah Damiani",
+      "fullName": "Sarah Damiani",
+      "criminalHistory": "Attorney at the U.S. Securities and Exchange Commission. No criminal charges or convictions on record.",
+      "category": "Legal Professional"
+    },
+    {
+      "name": "Gary Gensler",
+      "fullName": "Gary Gensler",
+      "criminalHistory": "Served as the 33rd Chair of the U.S. Securities and Exchange Commission from April 17, 2021, through January 20, 2025, after being nominated by President Joseph R. Biden and confirmed by the U.S. Senate. Led the agency through a robust rulemaking agenda to enhance efficiency, resiliency, and integrity in the U.S. capital markets. Oversaw an enforcement program that held wrongdoers accountable and returned billions to harmed investors. No criminal charges or convictions on record.",
+      "category": "Legal Professional"
+    },
+    {
+      "name": "Norman Ostrove",
+      "fullName": "Norman Ostrove",
+      "criminalHistory": "Assistant Director at U.S. Securities and Exchange Commission. Led insider trading investigations including the 2023 case against Jordan Meadow and Steven Teixeira involving trading based on nonpublic information stolen from girlfriend's laptop. No criminal charges or convictions on record.",
+      "category": "Legal Professional"
+    }
+  ],
+  "legalCases": [
+    {
+      "name": "Christian Curry",
+      "fullName": "Christian Curry",
+      "criminalHistory": "Former Morgan Stanley employee who filed a $1.78 billion discrimination suit against the firm in 1999, claiming he was fired because of his race and perceived sexual orientation after appearing naked in a gay porno magazine. Morgan Stanley denied the charges and claimed Curry was fired for bilking his expense account. The case involved allegations of fake racist e-mails being planted in company computers.",
+      "category": "Legal Case"
     }
   ]
 } 

@@ -21,37 +21,10 @@ const JeffreyEpstein = () => {
       <View style={styles.section}>
         <Card style={styles.card}>
           <CardHeader>
-            <Text style={styles.cardTitle}>Personal Information</Text>
+            <Text style={styles.cardTitle}>Description</Text>
           </CardHeader>
           <CardContent>
-            <Text style={styles.infoText}>• Born: 1953 in Brooklyn, NY</Text>
-            <Text style={styles.infoText}>• Based in Manhattan, NY for most of his career</Text>
-            <Text style={styles.infoText}>• Maintained residence in Palm Beach, FL</Text>
-            <Text style={styles.infoText}>• Had a townhouse in Miami, FL</Text>
-          </CardContent>
-        </Card>
-
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Known Locations</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.locationText}>📍 Brooklyn, NY (Birthplace)</Text>
-            <Text style={styles.locationText}>📍 Manhattan, NY (Primary residence)</Text>
-            <Text style={styles.locationText}>📍 Palm Beach, FL (Winter residence)</Text>
-            <Text style={styles.locationText}>📍 Miami, FL (Townhouse)</Text>
-          </CardContent>
-        </Card>
-
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Criminal History</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.infoText}>• Convicted in Florida in 2008 of procuring a child for prostitution and soliciting prostitution</Text>
-            <Text style={styles.infoText}>• Served 13 months under a controversial work-release arrangement</Text>
-            <Text style={styles.infoText}>• Arrested again in July 2019 on federal sex-trafficking charges involving dozens of underage girls</Text>
-            <Text style={styles.infoText}>• Died by suicide in custody before trial</Text>
+            <Text style={styles.infoText}>Sex Trafficker</Text>
           </CardContent>
         </Card>
       </View>
@@ -70,9 +43,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   profileImage: {
-    width: 200,
-    height: 200,
-    borderRadius: 100,
+    width: 250,
+    height: 250,
+    borderRadius: 125,
     borderWidth: 3,
     borderColor: '#e0e0e0',
   },
@@ -116,10 +89,11 @@ const styles = StyleSheet.create({
     color: '#1a1a1a',
   },
   infoText: {
-    fontSize: 14,
+    fontSize: 24,
     color: '#666',
-    lineHeight: 20,
+    lineHeight: 32,
     marginBottom: 8,
+    fontWeight: 'bold',
   },
   locationText: {
     fontSize: 14,

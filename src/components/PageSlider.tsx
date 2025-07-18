@@ -25,22 +25,32 @@ type RootStackParamList = {
   JeffreyEpstein: undefined;
   GhislaineMaxwell: undefined;
   EdgarBronfman: undefined;
-  LaurenceTisch: undefined;
+  JohnTisch: undefined;
   JamesHunt: undefined;
   EdPetersen: undefined;
+  LeslieWexner: undefined;
+  JamieDimon: undefined;
+  MichelleObama: undefined;
+  MaryJoWhite: undefined;
+  AlexandriaOcasioCortez: undefined;
   SafetyInfo: undefined;
   NotFound: undefined;
 };
 
 // Create navigation pages array sorted alphabetically with display names as initials
 const navigationPages: NavigationItem[] = [
-  { name: "E.B.", path: "EdgarBronfman", value: 0 },
-  { name: "E.P.", path: "EdPetersen", value: 18 },
-  { name: "G.M.", path: "GhislaineMaxwell", value: 36 },
-  { name: "J.E.", path: "JeffreyEpstein", value: 54 },
-  { name: "J.H.", path: "JamesHunt", value: 72 },
-  { name: "L.T.", path: "LaurenceTisch", value: 90 },
-  { name: "S.I.", path: "SafetyInfo", value: 100 }
+  { name: "A.O.", path: "AlexandriaOcasioCortez", value: 0 },
+  { name: "E.B.", path: "EdgarBronfman", value: 8 },
+  { name: "E.P.", path: "EdPetersen", value: 16 },
+  { name: "G.M.", path: "GhislaineMaxwell", value: 24 },
+  { name: "J.D.", path: "JamieDimon", value: 32 },
+  { name: "J.E.", path: "JeffreyEpstein", value: 40 },
+  { name: "J.H.", path: "JamesHunt", value: 48 },
+  { name: "J.T.", path: "JohnTisch", value: 56 },
+  { name: "L.W.", path: "LeslieWexner", value: 64 },
+  { name: "M.J.W.", path: "MaryJoWhite", value: 72 },
+  { name: "M.O.", path: "MichelleObama", value: 80 },
+  { name: "S.I.", path: "SafetyInfo", value: 88 }
 ];
 
 const cities: CityItem[] = [
@@ -278,7 +288,7 @@ export const PageSlider: React.FC<PageSliderProps> = ({
             <Slider
               value={sliderValue}
               minimumValue={0}
-              maximumValue={90}
+              maximumValue={88}
               step={0.1}
               onValueChange={handleValueChange}
               onSlidingComplete={handleValueCommit}
@@ -347,7 +357,7 @@ export const PageSlider: React.FC<PageSliderProps> = ({
         <Slider
           value={sliderValue}
           minimumValue={0}
-          maximumValue={90}
+          maximumValue={88}
           step={0.1}
           onValueChange={handleValueChange}
           onSlidingComplete={handleValueCommit}
@@ -469,17 +479,17 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   verticalSliderContainer: {
-    height: 300,
+    height: 350,
     width: 40,
     transform: [{ rotate: '270deg' }],
     marginRight: 20,
   },
   verticalSlider: {
-    width: 300,
+    width: 350,
     height: 40,
   },
   verticalLabels: {
-    height: 300,
+    height: 350,
     justifyContent: 'space-between',
     marginLeft: 15,
     paddingVertical: 10,

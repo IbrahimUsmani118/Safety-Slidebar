@@ -8,7 +8,7 @@ const JohnTisch = () => {
     <ScrollView style={styles.container}>
       <View style={styles.imageContainer}>
         <Image
-          source={{ uri: 'https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/giants/pwryw4a4ylsnks1cnssc' }}
+          source={{ uri: 'https://www.famousbirthdays.com/faces/tisch-jonathan-image.jpg' }}
           style={styles.profileImage}
           resizeMode="cover"
         />
@@ -21,37 +21,10 @@ const JohnTisch = () => {
       <View style={styles.section}>
         <Card style={styles.card}>
           <CardHeader>
-            <Text style={styles.cardTitle}>Role & Position</Text>
+            <Text style={styles.cardTitle}>Description</Text>
           </CardHeader>
           <CardContent>
-            <Text style={styles.infoText}>• Chairman, Loews Hotels (of the Tisch family)</Text>
-            <Text style={styles.infoText}>• Co-owner of the New York Giants (NFL)</Text>
-            <Text style={styles.infoText}>• Member of the prominent Tisch family</Text>
-            <Text style={styles.infoText}>• Based in New York, NY</Text>
-          </CardContent>
-        </Card>
-
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Anti-Trafficking Advocacy</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.infoText}>• Recognized by UCF Rosen College as an "Anti-human Trafficking Champion"</Text>
-            <Text style={styles.infoText}>• University of Central Florida recognition</Text>
-            <Text style={styles.infoText}>• Active in philanthropy and anti-trafficking efforts</Text>
-            <Text style={styles.infoText}>• Civic leader in the community</Text>
-          </CardContent>
-        </Card>
-
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Legal Status</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.infoText}>• Not a suspect in any criminal investigations</Text>
-            <Text style={styles.infoText}>• No criminal allegations or proceedings</Text>
-            <Text style={styles.infoText}>• No human-trafficking connections</Text>
-            <Text style={styles.infoText}>• Distinguished civic leader and philanthropist</Text>
+            <Text style={styles.infoText}>Mega Group/Study Group Pedophile</Text>
           </CardContent>
         </Card>
       </View>
@@ -70,9 +43,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   profileImage: {
-    width: 200,
-    height: 200,
-    borderRadius: 100,
+    width: 250,
+    height: 250,
+    borderRadius: 125,
     borderWidth: 3,
     borderColor: '#e0e0e0',
   },
@@ -116,10 +89,11 @@ const styles = StyleSheet.create({
     color: '#1a1a1a',
   },
   infoText: {
-    fontSize: 14,
+    fontSize: 24,
     color: '#666',
-    lineHeight: 20,
+    lineHeight: 32,
     marginBottom: 8,
+    fontWeight: 'bold',
   },
   locationText: {
     fontSize: 14,

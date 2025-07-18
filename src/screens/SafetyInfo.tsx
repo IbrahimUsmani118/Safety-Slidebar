@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { View, Text, ScrollView, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView, StyleSheet } from 'react-native';
 import { Card, CardContent, CardHeader, CardTitle } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
 import traffickersData from '../data/people.json';
@@ -7,53 +7,67 @@ import Slider from '@react-native-community/slider';
 
 const SafetyInfo = () => {
   const [sliderValue, setSliderValue] = useState(0);
-  const [selectedCity, setSelectedCity] = useState('All Cities');
-
-  const cities = ['All Cities', 'New York', 'Miami', 'Los Angeles', 'Dallas', 'London', 'Paris', 'Oxford', 'Cambridge', 'Boston', 'Philadelphia', 'Southampton', 'Manhattan', 'Brooklyn', 'Palm Beach', 'Fort Worth', 'Pasadena', 'Westwood', 'Santa Monica', 'East Hampton', 'Westchester County', 'Montrèal', 'Neuilly-sur-Seine', 'Maisons-Laffitte', 'Buckingham Palace', 'Windsor Great Park', 'Berkshire'];
 
   const handleSliderChange = (value: number) => {
     setSliderValue(value);
   };
 
   const handleSliderComplete = (value: number) => {
-    // Snap to nearest section (0 = Epstein Network, 100 = Law Enforcement)
-    const snappedValue = value < 50 ? 0 : 100;
+    // Snap to nearest section (0-16 = Epstein Network, 17-33 = Law Enforcement, 34-50 = Business Leaders, 51-67 = Public Figures, 68-84 = Legal Professionals, 85-100 = Legal Cases)
+    let snappedValue;
+    if (value < 16) snappedValue = 0;
+    else if (value < 33) snappedValue = 17;
+    else if (value < 50) snappedValue = 34;
+    else if (value < 67) snappedValue = 51;
+    else if (value < 84) snappedValue = 68;
+    else snappedValue = 85;
     setSliderValue(snappedValue);
   };
 
+  // Get current category based on slider value
+  const getCurrentCategory = () => {
+    if (sliderValue < 16) return 'epsteinNetwork';
+    if (sliderValue < 33) return 'lawEnforcement';
+    if (sliderValue < 50) return 'businessLeaders';
+    if (sliderValue < 67) return 'publicFigures';
+    if (sliderValue < 84) return 'legalProfessionals';
+    return 'legalCases';
+  };
 
-
-  // Filter Epstein network by city
-  const filteredEpsteinNetwork = useMemo(() => {
-    if (selectedCity === 'All Cities') {
-      return traffickersData.epsteinNetwork;
+  // Get category display name
+  const getCategoryDisplayName = (category: string) => {
+    switch (category) {
+      case 'epsteinNetwork': return 'Epstein Network';
+      case 'lawEnforcement': return 'Law Enforcement';
+      case 'businessLeaders': return 'Business Leaders';
+      case 'publicFigures': return 'Public Figures';
+      case 'legalProfessionals': return 'Legal Professionals';
+      case 'legalCases': return 'Legal Cases';
+      default: return category;
     }
-    
-    return traffickersData.epsteinNetwork.filter(person => {
-      const cities = person.cities.join(' ').toLowerCase();
-      const city = selectedCity.toLowerCase();
-      return cities.includes(city);
-    });
-  }, [selectedCity]);
+  };
 
-  // Filter law enforcement by city
-  const filteredLawEnforcement = useMemo(() => {
-    if (selectedCity === 'All Cities') {
-      return traffickersData.lawEnforcement;
+  // Get category color
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'epsteinNetwork': return '#FF6B6B';
+      case 'lawEnforcement': return '#4CAF50';
+      case 'businessLeaders': return '#2196F3';
+      case 'publicFigures': return '#9C27B0';
+      case 'legalProfessionals': return '#FF9800';
+      case 'legalCases': return '#795548';
+      default: return '#666';
     }
-    
-    return traffickersData.lawEnforcement.filter(person => {
-      const cities = person.cities.join(' ').toLowerCase();
-      const city = selectedCity.toLowerCase();
-      return cities.includes(city);
-    });
-  }, [selectedCity]);
+  };
+
+  const currentCategory = getCurrentCategory();
+  const categoryData = traffickersData[currentCategory as keyof typeof traffickersData] || [];
 
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.title}>Safety Information</Text>
-        <Text style={styles.subtitle}>Important information about known traffickers and their networks</Text>
+        <Text style={styles.subtitle}>Important information about known individuals and their backgrounds</Text>
       </View>
 
       {/* Slider at the top */}
@@ -66,100 +80,59 @@ const SafetyInfo = () => {
           value={sliderValue}
           onValueChange={handleSliderChange}
           onSlidingComplete={handleSliderComplete}
-          minimumTrackTintColor="#FF6B6B"
+          minimumTrackTintColor={getCategoryColor(currentCategory)}
           maximumTrackTintColor="#CCCCCC"
-          thumbTintColor="#FF6B6B"
+          thumbTintColor={getCategoryColor(currentCategory)}
         />
         <View style={styles.sliderLabels}>
-          <Text style={[styles.sliderLabel, sliderValue < 50 && styles.sliderLabelActive]}>
-            Epstein Network
+          <Text style={[styles.sliderLabel, sliderValue < 16 && styles.sliderLabelActive, { color: sliderValue < 16 ? getCategoryColor('epsteinNetwork') : '#666' }]}>
+            Epstein
           </Text>
-          <Text style={[styles.sliderLabel, sliderValue >= 50 && styles.sliderLabelActive]}>
-            Law Enforcement
+          <Text style={[styles.sliderLabel, sliderValue >= 17 && sliderValue < 33 && styles.sliderLabelActive, { color: sliderValue >= 17 && sliderValue < 33 ? getCategoryColor('lawEnforcement') : '#666' }]}>
+            Law
+          </Text>
+          <Text style={[styles.sliderLabel, sliderValue >= 34 && sliderValue < 50 && styles.sliderLabelActive, { color: sliderValue >= 34 && sliderValue < 50 ? getCategoryColor('businessLeaders') : '#666' }]}>
+            Business
+          </Text>
+          <Text style={[styles.sliderLabel, sliderValue >= 51 && sliderValue < 67 && styles.sliderLabelActive, { color: sliderValue >= 51 && sliderValue < 67 ? getCategoryColor('publicFigures') : '#666' }]}>
+            Public
+          </Text>
+          <Text style={[styles.sliderLabel, sliderValue >= 68 && sliderValue < 84 && styles.sliderLabelActive, { color: sliderValue >= 68 && sliderValue < 84 ? getCategoryColor('legalProfessionals') : '#666' }]}>
+            Legal
+          </Text>
+          <Text style={[styles.sliderLabel, sliderValue >= 85 && styles.sliderLabelActive, { color: sliderValue >= 85 ? getCategoryColor('legalCases') : '#666' }]}>
+            Cases
           </Text>
         </View>
-      </View>
-
-      {/* City Filter */}
-      <View style={styles.cityFilterContainer}>
-        <Text style={styles.cityFilterTitle}>Filter by City:</Text>
-        <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.cityFilterScroll}>
-          {cities.map((city) => (
-            <TouchableOpacity
-              key={city}
-              style={[
-                styles.cityFilterButton,
-                selectedCity === city && styles.cityFilterButtonActive
-              ]}
-              onPress={() => setSelectedCity(city)}
-            >
-              <Text style={[
-                styles.cityFilterButtonText,
-                selectedCity === city && styles.cityFilterButtonTextActive
-              ]}>
-                {city}
-              </Text>
-            </TouchableOpacity>
-          ))}
-        </ScrollView>
       </View>
 
       {/* Show content based on slider position */}
-      {sliderValue < 50 ? (
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Epstein Network</Text>
-          {filteredEpsteinNetwork.length > 0 ? (
-            filteredEpsteinNetwork.map((person: any, index: number) => (
-              <Card key={index} style={styles.card}>
-                <CardHeader>
-                  <View style={styles.cardHeader}>
-                    <Text style={styles.cardTitle}>{person.name}</Text>
-                    <Badge variant="secondary">{person.category}</Badge>
-                  </View>
-                </CardHeader>
-                <CardContent>
-                  <Text style={styles.fullName}>Full name: {person.fullName}</Text>
-                  <Text style={styles.citiesTitle}>Cities/regions:</Text>
-                  {person.cities.map((city: string, cityIndex: number) => (
-                    <Text key={cityIndex} style={styles.city}>• {city}</Text>
-                  ))}
-                  <Text style={styles.criminalHistoryTitle}>Background:</Text>
-                  <Text style={styles.criminalHistory}>{person.criminalHistory}</Text>
-                </CardContent>
-              </Card>
-            ))
-          ) : (
-            <Text style={styles.noResultsText}>No Epstein network members found for {selectedCity}</Text>
-          )}
-        </View>
-      ) : (
-        <View style={styles.section}>
-          <Text style={styles.sectionTitle}>Law Enforcement</Text>
-          {filteredLawEnforcement.length > 0 ? (
-            filteredLawEnforcement.map((person: any, index: number) => (
-              <Card key={index} style={styles.card}>
-                <CardHeader>
-                  <View style={styles.cardHeader}>
-                    <Text style={styles.cardTitle}>{person.name}</Text>
-                    <Badge variant="default">{person.category}</Badge>
-                  </View>
-                </CardHeader>
-                <CardContent>
-                  <Text style={styles.fullName}>Full name: {person.fullName}</Text>
-                  <Text style={styles.citiesTitle}>Known locations/roles:</Text>
-                  {person.cities.map((city: string, cityIndex: number) => (
-                    <Text key={cityIndex} style={styles.city}>• {city}</Text>
-                  ))}
-                  <Text style={styles.criminalHistoryTitle}>Career Summary:</Text>
-                  <Text style={styles.criminalHistory}>{person.criminalHistory}</Text>
-                </CardContent>
-              </Card>
-            ))
-          ) : (
-            <Text style={styles.noResultsText}>No law enforcement found for {selectedCity}</Text>
-          )}
-        </View>
-      )}
+      <View style={styles.section}>
+        <Text style={[styles.sectionTitle, { color: getCategoryColor(currentCategory) }]}>
+          {getCategoryDisplayName(currentCategory)}
+        </Text>
+        {categoryData.length > 0 ? (
+          categoryData.map((person: any, index: number) => (
+            <Card key={index} style={styles.card}>
+              <CardHeader>
+                <View style={styles.cardHeader}>
+                  <Text style={styles.cardTitle}>{person.name}</Text>
+                  <Badge variant="secondary" style={{ backgroundColor: getCategoryColor(currentCategory) }}>
+                    {person.category}
+                  </Badge>
+                </View>
+              </CardHeader>
+              <CardContent>
+                <Text style={styles.fullName}>Full name: {person.fullName}</Text>
+                <Text style={styles.criminalHistoryTitle}>Background:</Text>
+                <Text style={styles.criminalHistory}>{person.criminalHistory}</Text>
+              </CardContent>
+            </Card>
+          ))
+        ) : (
+          <Text style={styles.noResultsText}>No {getCategoryDisplayName(currentCategory).toLowerCase()} found</Text>
+        )}
+      </View>
     </ScrollView>
   );
 };
@@ -203,49 +176,10 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   sliderLabel: {
-    fontSize: 14,
-    color: '#666',
-  },
-  sliderLabelActive: {
-    color: '#FF6B6B',
-    fontWeight: '600',
-  },
-  cityFilterContainer: {
-    backgroundColor: '#fff',
-    paddingVertical: 16,
-    paddingHorizontal: 20,
-    borderBottomWidth: 1,
-    borderBottomColor: '#e0e0e0',
-  },
-  cityFilterTitle: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#1a1a1a',
-    marginBottom: 12,
-  },
-  cityFilterScroll: {
-    flexGrow: 0,
-  },
-  cityFilterButton: {
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    marginRight: 8,
-    borderRadius: 20,
-    backgroundColor: '#f0f0f0',
-    borderWidth: 1,
-    borderColor: '#e0e0e0',
-  },
-  cityFilterButtonActive: {
-    backgroundColor: '#FF6B6B',
-    borderColor: '#FF6B6B',
-  },
-  cityFilterButtonText: {
-    fontSize: 14,
-    color: '#666',
+    fontSize: 12,
     fontWeight: '500',
   },
-  cityFilterButtonTextActive: {
-    color: '#fff',
+  sliderLabelActive: {
     fontWeight: '600',
   },
   section: {
@@ -254,7 +188,6 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 22,
     fontWeight: 'bold',
-    color: '#1a1a1a',
     marginBottom: 16,
   },
   card: {
@@ -282,29 +215,11 @@ const styles = StyleSheet.create({
     flex: 1,
     marginRight: 12,
   },
-  description: {
-    fontSize: 14,
-    color: '#666',
-    lineHeight: 20,
-  },
   fullName: {
     fontSize: 14,
     fontWeight: '500',
     color: '#1a1a1a',
     marginBottom: 8,
-  },
-  citiesTitle: {
-    fontSize: 14,
-    fontWeight: '500',
-    color: '#1a1a1a',
-    marginBottom: 4,
-  },
-  city: {
-    fontSize: 14,
-    color: '#666',
-    lineHeight: 20,
-    marginLeft: 8,
-    marginBottom: 2,
   },
   noResultsText: {
     fontSize: 16,

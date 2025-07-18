@@ -21,37 +21,10 @@ const JamesHunt = () => {
       <View style={styles.section}>
         <Card style={styles.card}>
           <CardHeader>
-            <Text style={styles.cardTitle}>Professional Information</Text>
+            <Text style={styles.cardTitle}>Description</Text>
           </CardHeader>
           <CardContent>
-            <Text style={styles.infoText}>• Former Special Agent-in-Charge, DEA New York Division</Text>
-            <Text style={styles.infoText}>• Oversaw major drug-trafficking investigations</Text>
-            <Text style={styles.infoText}>• Participated in multi-state heroin and cocaine cases</Text>
-            <Text style={styles.infoText}>• Led task forces targeting narcotics and trafficking operations</Text>
-          </CardContent>
-        </Card>
-
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Career Highlights</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.locationText}>📍 New York Division (DEA Special Agent-in-Charge)</Text>
-            <Text style={styles.locationText}>📍 Multi-state investigations across the United States</Text>
-            <Text style={styles.locationText}>📍 International drug trafficking operations</Text>
-            <Text style={styles.locationText}>📍 Forced-labor and sex-trafficking ring investigations</Text>
-          </CardContent>
-        </Card>
-
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Career Summary</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.infoText}>• Distinguished law enforcement career with no public record of any criminal charges</Text>
-            <Text style={styles.infoText}>• Led investigations that targeted trafficking as part of broader narcotics operations</Text>
-            <Text style={styles.infoText}>• Recognized for anti-trafficking and drug enforcement work</Text>
-            <Text style={styles.infoText}>• Specialized in multi-state and international drug trafficking investigations</Text>
+            <Text style={styles.infoText}>DEA Facilitator Pedophile</Text>
           </CardContent>
         </Card>
       </View>
@@ -70,9 +43,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   profileImage: {
-    width: 200,
-    height: 200,
-    borderRadius: 100,
+    width: 250,
+    height: 250,
+    borderRadius: 125,
     borderWidth: 3,
     borderColor: '#e0e0e0',
   },
@@ -116,10 +89,11 @@ const styles = StyleSheet.create({
     color: '#1a1a1a',
   },
   infoText: {
-    fontSize: 14,
+    fontSize: 24,
     color: '#666',
-    lineHeight: 20,
+    lineHeight: 32,
     marginBottom: 8,
+    fontWeight: 'bold',
   },
   locationText: {
     fontSize: 14,

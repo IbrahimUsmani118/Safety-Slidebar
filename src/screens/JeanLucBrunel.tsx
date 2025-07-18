@@ -19,41 +19,10 @@ const JeanLucBrunel = () => {
       </View>
 
       <View style={styles.section}>
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Personal Information</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.infoText}>• Full name: Jean-Luc Didier Henri Brunel</Text>
-            <Text style={styles.infoText}>• Born in Neuilly-sur-Seine (Paris suburbs), France</Text>
-            <Text style={styles.infoText}>• Modeling agency owner</Text>
-            <Text style={styles.infoText}>• Fashion industry figure</Text>
-          </CardContent>
-        </Card>
-
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Known Locations</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.locationText}>📍 Neuilly-sur-Seine, France (Birthplace)</Text>
-            <Text style={styles.locationText}>📍 Paris, France (Modeling agencies)</Text>
-            <Text style={styles.locationText}>📍 New York City (Mid-2000s relocation)</Text>
-            <Text style={styles.locationText}>📍 Miami, FL (Mid-2000s relocation)</Text>
-          </CardContent>
-        </Card>
-
-        <Card style={styles.card}>
-          <CardHeader>
-            <Text style={styles.cardTitle}>Criminal History</Text>
-          </CardHeader>
-          <CardContent>
-            <Text style={styles.infoText}>• French modeling agent indicted in December 2020 for rape and sexual assault of minors</Text>
-            <Text style={styles.infoText}>• Suspected of supplying underage girls to Epstein</Text>
-            <Text style={styles.infoText}>• Committed suicide in a Paris prison cell in February 2022 before trial</Text>
-            <Text style={styles.infoText}>• No conviction due to death before trial</Text>
-          </CardContent>
-        </Card>
+        <Text style={styles.sectionTitle}>Description</Text>
+        <Text style={styles.text}>
+          Model Agent
+        </Text>
       </View>
     </ScrollView>
   );
@@ -70,9 +39,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   profileImage: {
-    width: 200,
-    height: 200,
-    borderRadius: 100,
+    width: 250,
+    height: 250,
+    borderRadius: 125,
     borderWidth: 3,
     borderColor: '#e0e0e0',
   },
@@ -97,35 +66,17 @@ const styles = StyleSheet.create({
   section: {
     padding: 20,
   },
-  card: {
-    marginBottom: 16,
-    backgroundColor: '#fff',
-    borderRadius: 12,
-    shadowColor: '#000',
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.1,
-    shadowRadius: 3.84,
-    elevation: 5,
-  },
-  cardTitle: {
-    fontSize: 18,
-    fontWeight: '600',
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
     color: '#1a1a1a',
+    marginBottom: 10,
   },
-  infoText: {
-    fontSize: 14,
-    color: '#666',
-    lineHeight: 20,
-    marginBottom: 8,
-  },
-  locationText: {
-    fontSize: 14,
-    color: '#666',
-    lineHeight: 20,
-    marginBottom: 8,
+  text: {
+    fontSize: 24,
+    lineHeight: 32,
+    color: '#555',
+    fontWeight: 'bold',
   },
 });
 
