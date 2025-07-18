@@ -1,0 +1,66 @@
+{
+  "traffickers": [],
+  "epsteinNetwork": [
+    {
+      "name": "Jeffrey Edward Epstein",
+      "fullName": "Jeffrey Edward Epstein",
+      "cities": [
+        "Manhattan, NY (Primary base of operations)",
+        "Palm Beach, FL (Residence and trafficking location)",
+        "Miami, FL (Townhouse location)"
+      ],
+      "criminalHistory": "Convicted in Florida in 2008 of procuring a child for prostitution and soliciting prostitution; served 13 months under a controversial work-release arrangement. Arrested again in July 2019 on federal sex-trafficking charges involving dozens of underage girls, but died by suicide in custody before trial.",
+      "category": "Epstein Network"
+    },
+    {
+      "name": "Ghislaine Noelle Marion Maxwell",
+      "fullName": "Ghislaine Noelle Marion Maxwell",
+      "cities": [
+        "New York City, NY (Madison Avenue apartment - trafficking hub)",
+        "Palm Beach, FL (Residence during Epstein's investigation)"
+      ],
+      "criminalHistory": "In December 2021, convicted by a U.S. federal jury on five counts of sex trafficking and conspiracy for recruiting and grooming underage girls for Epstein; sentenced to 20 years in prison. Her appeal is now before the Supreme Court, with the DOJ urging against overturning her conviction.",
+      "category": "Epstein Network"
+    },
+    {
+      "name": "Edgar Miles Bronfman Sr.",
+      "fullName": "Edgar Miles Bronfman Sr.",
+      "cities": [
+        "New York, NY (Seagram headquarters)",
+        "Manhattan, NY (Primary residence)"
+      ],
+      "criminalHistory": "Chairman of Seagram Company. No criminal charges or convictions on record.",
+      "category": "Epstein Network"
+    },
+    {
+      "name": "John Tisch",
+      "fullName": "John Tisch",
+      "cities": [
+        "New York, NY (Loews Hotels headquarters)",
+        "New York, NY (Co-owner of New York Giants NFL team)"
+      ],
+      "criminalHistory": "Not a suspect: No criminal allegations or proceedings. Human-trafficking connection: As a civic leader, he's been honored for philanthropy and anti-trafficking advocacy. Chairman of Loews Hotels and co-owner of the New York Giants.",
+      "category": "Civic Leader"
+    }
+  ],
+  "lawEnforcement": [
+    {
+      "name": "James Hunt",
+      "fullName": "James Hunt",
+      "cities": [
+        "New York, NY (DEA New York Division)"
+      ],
+      "criminalHistory": "Former Special Agent-in-Charge, DEA New York Division. Distinguished law enforcement career leading investigations that targeted trafficking as part of broader narcotics operations. Distinguished career with no public record of any criminal charges.",
+      "category": "Law Enforcement"
+    },
+    {
+      "name": "Ed Petersen",
+      "fullName": "Ed Petersen",
+      "cities": [
+        "New York, NY (FBI New York Field Office)"
+      ],
+      "criminalHistory": "Retired FBI Special Agent. Distinguished FBI career spanning decades, leading high-profile kidnapping and organized-crime investigations. Distinguished career with no public record of any criminal charges.",
+      "category": "Law Enforcement"
+    }
+  ]
+} 
